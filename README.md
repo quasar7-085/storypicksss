@@ -6,9 +6,18 @@
 
 Google Flow에서 장면을 만들고 HyperFrames Desktop에서 편집할 수 있는 한국어 Codex 플러그인입니다. 승인한 시나리오를 기준으로 컷별 콘티와 한·영 프롬프트를 만들고, 선택한 영상과 내레이션을 편집 가능한 프로젝트로 전달합니다.
 
+## 빠르게 시작하기
+
+1. Codex 채팅에 이 저장소 링크를 주고 플러그인 설치를 요청합니다.
+
+   > https://github.com/quasar7-085/storypicksss 플러그인을 설치해줘.
+
+2. 설치 후 작품을 저장할 폴더에서 새 채팅을 열고 `/storypicksss:production` 스킬을 선택합니다.
+3. 제작할 영상과 참고 자료를 알려주고, Codex의 질문에 답하면서 영상 제작을 진행합니다.
+
 ## 설치
 
-Codex CLI에서 다음 두 명령을 실행합니다. 첫 번째 명령은 이 GitHub 저장소를 마켓플레이스로 등록하고, 두 번째 명령은 플러그인을 설치합니다.
+직접 설치하려면 Codex CLI에서 다음 두 명령을 실행합니다. 첫 번째 명령은 이 GitHub 저장소를 마켓플레이스로 등록하고, 두 번째 명령은 플러그인을 설치합니다.
 
 ```sh
 codex plugin marketplace add quasar7-085/storypicksss
