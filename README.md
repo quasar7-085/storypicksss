@@ -1,5 +1,9 @@
 # storypicksss
 
+<p align="center">
+  <img src="./assets/storypicksss-logo.png" width="192" alt="storypicksss 네온 리본 재생 로고">
+</p>
+
 Google Flow에서 장면을 만들고 HyperFrames Desktop에서 편집할 수 있는 한국어 Codex 플러그인입니다. 승인한 시나리오를 기준으로 컷별 콘티와 한·영 프롬프트를 만들고, 선택한 영상과 내레이션을 편집 가능한 프로젝트로 전달합니다.
 
 ## 설치
