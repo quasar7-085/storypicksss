@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "storypicksss",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Google Flow로 장면을 생성하고 HyperFrames Desktop에서 편집하는 한국어 영상 제작 워크플로.",
   "extensions": {
     "com.openai": {
