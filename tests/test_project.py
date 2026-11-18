@@ -7,7 +7,7 @@ from pathlib import Path
 
 class ProjectTest(unittest.TestCase):
     def test_init_and_resume(self):
-        plugin = Path(__file__).resolve().parents[1] / "plugins/flow-hyperframes"
+        plugin = Path(__file__).resolve().parents[1] / "plugins/storypicksss"
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / "첫 작품"
             init = [sys.executable, str(plugin / "scripts/init_project.py"), str(root)]

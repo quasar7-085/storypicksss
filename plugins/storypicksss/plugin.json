@@ -1,12 +1,12 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "flow-hyperframes",
-  "version": "0.1.0",
+  "name": "storypicksss",
+  "version": "0.1.1",
   "description": "Google Flow로 장면을 생성하고 HyperFrames Desktop에서 편집하는 한국어 영상 제작 워크플로.",
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Flow HyperFrames",
+        "displayName": "storypicksss",
         "shortDescription": "콘티부터 숏폼 영상 편집까지",
         "category": "Productivity",
         "defaultPrompt": "새 숏폼 영상 제작을 시작해줘."

@@ -1,4 +1,4 @@
-# Flow HyperFrames
+# storypicksss
 
 Google Flow에서 장면을 만들고 HyperFrames Desktop에서 편집할 수 있는 한국어 Codex 플러그인입니다. 승인한 시나리오를 기준으로 컷별 콘티와 한·영 프롬프트를 만들고, 선택한 영상과 내레이션을 편집 가능한 프로젝트로 전달합니다.
 
@@ -8,10 +8,20 @@ Codex CLI에서 다음 두 명령을 실행합니다. 첫 번째 명령은 이 G
 
 ```sh
 codex plugin marketplace add quasar7-085/repo
-codex plugin add flow-hyperframes@flow-studio
+codex plugin add storypicksss@flow-studio
 ```
 
 설치 결과는 `codex plugin list --marketplace flow-studio`로 확인합니다. Codex에서 작품을 저장할 폴더를 열고 새 채팅을 시작합니다. 로컬에 복제한 저장소로 설치하려면 첫 명령 대신 저장소 루트에서 `codex plugin marketplace add .`을 실행합니다.
+
+### 기존 설치에서 전환
+
+이전에 `flow-hyperframes`를 GitHub 마켓플레이스에서 설치했다면 아래 순서로 전환합니다.
+
+```sh
+codex plugin remove flow-hyperframes@flow-studio
+codex plugin marketplace upgrade flow-studio
+codex plugin add storypicksss@flow-studio
+```
 
 ## 첫 영상 만들기
 
@@ -19,7 +29,7 @@ codex plugin add flow-hyperframes@flow-studio
 2. 작품 폴더에서 원고나 이미지를 첨부하고 아래처럼 요청합니다. 플러그인이 제작 폴더를 준비하고 환경 확인부터 시작합니다.
 3. 시나리오를 승인하고 순차 또는 일괄 진행을 고릅니다. 생성된 컷을 선택하면 HyperFrames 타임라인으로 이어집니다. MP4가 필요하면 편집본 버전을 지정해 내보내기를 요청합니다.
 
-> Flow HyperFrames로 이 자료를 바탕으로 30초 세로 영상을 만들어줘. 시나리오부터 보여줘.
+> storypicksss 플러그인으로 이 자료를 바탕으로 30초 세로 영상을 만들어줘. 시나리오부터 보여줘.
 
 > 02는 통과. 03A는 화면 밖 내레이션만 들리고 인물은 입을 다문 채 표정으로만 연기하도록 프롬프트를 수정해줘.
 
@@ -43,16 +53,16 @@ my-film/
 └── .codex/agents/               읽기 전용 콘티 검수 역할
 ```
 
-예를 들어 `s03a-board-v02.png`, `s03a-prompt-en-v02.md`, `s03a-flow-v02.mp4`는 03A 컷의 콘티·프롬프트·생성 영상입니다. 각 파일의 버전은 독립적으로 관리하고 채택 조합은 진행 기록에 남깁니다. [전체 파일명 규칙](plugins/flow-hyperframes/resources/layout.md)
+예를 들어 `s03a-board-v02.png`, `s03a-prompt-en-v02.md`, `s03a-flow-v02.mp4`는 03A 컷의 콘티·프롬프트·생성 영상입니다. 각 파일의 버전은 독립적으로 관리하고 채택 조합은 진행 기록에 남깁니다. [전체 파일명 규칙](plugins/storypicksss/resources/layout.md)
 
 ## 플러그인 저장소 구조
 
 | 경로 | 용도 |
 |---|---|
 | `.agents/plugins/marketplace.json` | GitHub에서 설치할 때 읽는 마켓플레이스 목록 |
-| `plugins/flow-hyperframes/` | 플러그인 매니페스트와 Codex 호환 매니페스트 |
-| `plugins/flow-hyperframes/skills/` | 제작 시작, 콘티, 장면 생성, 편집 스킬 |
-| `plugins/flow-hyperframes/resources/` | 15단계 지시서, 파일명 규칙, 콘티 검수 역할과 실행 도구 |
-| `plugins/flow-hyperframes/scripts/` | 작품 폴더 초기화 |
+| `plugins/storypicksss/` | 플러그인 매니페스트와 Codex 호환 매니페스트 |
+| `plugins/storypicksss/skills/` | 제작 시작, 콘티, 장면 생성, 편집 스킬 |
+| `plugins/storypicksss/resources/` | 15단계 지시서, 파일명 규칙, 콘티 검수 역할과 실행 도구 |
+| `plugins/storypicksss/scripts/` | 작품 폴더 초기화 |
 
-플러그인 소스를 복제한 개발자는 `python3 plugins/flow-hyperframes/scripts/init_project.py ../my-film`으로 작업 폴더를 직접 만들 수 있습니다. 기존 작품에서 다시 실행하면 편집한 지시서와 생성 파일을 보존합니다. [15단계 작업지시서](plugins/flow-hyperframes/resources/workflow.md)
+플러그인 소스를 복제한 개발자는 `python3 plugins/storypicksss/scripts/init_project.py ../my-film`으로 작업 폴더를 직접 만들 수 있습니다. 기존 작품에서 다시 실행하면 편집한 지시서와 생성 파일을 보존합니다. [15단계 작업지시서](plugins/storypicksss/resources/workflow.md)

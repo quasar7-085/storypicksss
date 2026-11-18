@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "flow-hyperframes",
+      "name": "storypicksss",
       "source": {
         "source": "local",
-        "path": "./plugins/flow-hyperframes"
+        "path": "./plugins/storypicksss"
       },
       "policy": {
         "installation": "AVAILABLE",
