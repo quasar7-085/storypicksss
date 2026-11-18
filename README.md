@@ -7,7 +7,7 @@ Google Flow에서 장면을 만들고 HyperFrames Desktop에서 편집할 수 �
 Codex CLI에서 다음 두 명령을 실행합니다. 첫 번째 명령은 이 GitHub 저장소를 마켓플레이스로 등록하고, 두 번째 명령은 플러그인을 설치합니다.
 
 ```sh
-codex plugin marketplace add quasar7-085/repo
+codex plugin marketplace add quasar7-085/storypicksss
 codex plugin add storypicksss@flow-studio
 ```
 
